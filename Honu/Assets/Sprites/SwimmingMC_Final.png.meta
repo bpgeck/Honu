@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: 486f10f5249f1f24ebfe570358cc1625
+timeCreated: 1463445920
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Foward_Still
+    21300002: Foward_Left
+    21300004: Forward_Right
+    21300006: Right_Still
+    21300008: Right_Left
+    21300010: Right_Right
+    21300012: Left_Still
+    21300014: Left_Left
+    21300016: Left_Right
+    21300018: Back_Still
+    21300020: Back_Left
+    21300022: Back_Right
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -2
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Foward_Still
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 120
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Foward_Left
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 120
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Forward_Right
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 120
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Right_Still
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 83
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Right_Left
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 83
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Right_Right
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 83
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Left_Still
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 46
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Left_Left
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 46
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Left_Right
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 46
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Back_Still
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Back_Left
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 7
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Back_Right
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 7
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

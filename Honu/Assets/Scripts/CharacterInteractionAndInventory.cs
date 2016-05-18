@@ -19,6 +19,9 @@ public class CharacterInteractionAndInventory : MonoBehaviour
     public bool hasHint;
     public int numDriftwood;
 
+    bool hullFixed;
+    bool propFixed;
+
     public int directionFacing = 3;
     float checkDistance = 0.25f;
 
@@ -29,6 +32,9 @@ public class CharacterInteractionAndInventory : MonoBehaviour
         hasPropeller = false;
         hasBirthday = false;
         hasHint = false;
+
+        hullFixed = false;
+        propFixed = false;
         numDriftwood = 0;
 	}
 	
@@ -103,6 +109,23 @@ public class CharacterInteractionAndInventory : MonoBehaviour
 
                         hasHint = true;
                         hits[i].collider.gameObject.tag = "Untagged";
+                    }
+                    else if (hits[i].collider.name.Contains("Boat"))
+                    {
+                        if (hasToolbox && numDriftwood == 5 && !hullFixed)
+                        {
+                            hullFixed = true;
+                        }
+                        
+                        if (hasToolbox && hasPropeller && !propFixed)
+                        {
+                            propFixed = true;
+                        }
+
+                        if (hullFixed && propFixed && hasScubaGear)
+                        {
+                            // Time to move onto the next zone!
+                        }
                     }
                 }
             }

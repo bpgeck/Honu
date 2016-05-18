@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1f5da51177dac35448611d24b1f29080
-timeCreated: 1463335189
+timeCreated: 1463451383
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -34,8 +34,8 @@ TextureImporter:
     21300054: GameAssetsInProgress_27
     21300056: GameAssetsInProgress_28
     21300058: GameAssetsInProgress_29
-    21300060: GameAssetsInProgress_30
-    21300062: GameAssetsInProgress_31
+    21300060: Current_Vert0
+    21300062: Current_Horiz0
     21300064: GameAssetsInProgress_32
     21300066: GameAssetsInProgress_33
     21300068: GameAssetsInProgress_34
@@ -66,8 +66,8 @@ TextureImporter:
     21300118: GameAssetsInProgress_59
     21300120: GameAssetsInProgress_60
     21300122: GameAssetsInProgress_61
-    21300124: GameAssetsInProgress_62
-    21300126: GameAssetsInProgress_63
+    21300124: Current_Vert1
+    21300126: Current_Horiz1
     21300128: GameAssetsInProgress_64
     21300130: GameAssetsInProgress_65
     21300132: GameAssetsInProgress_66
@@ -98,8 +98,8 @@ TextureImporter:
     21300182: GameAssetsInProgress_91
     21300184: GameAssetsInProgress_92
     21300186: GameAssetsInProgress_93
-    21300188: GameAssetsInProgress_94
-    21300190: GameAssetsInProgress_95
+    21300188: Current_Vert2
+    21300190: Current_Horiz2
     21300192: GameAssetsInProgress_96
     21300194: GameAssetsInProgress_97
     21300196: GameAssetsInProgress_98
@@ -107,7 +107,7 @@ TextureImporter:
     21300200: DockNoSupports
     21300202: GameAssetsInProgress_101
     21300204: GameAssetsInProgress_102
-    21300206: GameAssetsInProgress_103
+    21300206: PalmTree
     21300208: GameAssetsInProgress_104
     21300210: GameAssetsInProgress_105
     21300212: GameAssetsInProgress_106
@@ -120,9 +120,9 @@ TextureImporter:
     21300226: GameAssetsInProgress_113
     21300228: RightFacingBench
     21300230: LeftFacingBench
-    21300232: GameAssetsInProgress_116
-    21300234: GameAssetsInProgress_117
-    21300236: GameAssetsInProgress_118
+    21300232: Current_Vert3
+    21300234: Current_Horiz3
+    21300236: Boat1
     21300238: GameAssetsInProgress_119
     21300240: GameAssetsInProgress_120
     21300242: GameAssetsInProgress_121
@@ -152,8 +152,8 @@ TextureImporter:
     21300290: GameAssetsInProgress_145
     21300292: GameAssetsInProgress_146
     21300294: GameAssetsInProgress_147
-    21300296: GameAssetsInProgress_148
-    21300298: GameAssetsInProgress_149
+    21300296: Current_Vert4
+    21300298: Current_Horiz4
     21300300: GameAssetsInProgress_150
     21300302: GameAssetsInProgress_151
     21300304: GameAssetsInProgress_152
@@ -183,8 +183,8 @@ TextureImporter:
     21300352: StackedBoxes1
     21300354: Box2
     21300356: StackedBoxes2
-    21300358: GameAssetsInProgress_179
-    21300360: GameAssetsInProgress_180
+    21300358: Current_Vert5
+    21300360: Current_Horiz5
     21300362: GameAssetsInProgress_181
     21300364: GameAssetsInProgress_182
     21300366: GameAssetsInProgress_183
@@ -213,8 +213,8 @@ TextureImporter:
     21300412: GameAssetsInProgress_206
     21300414: Box1
     21300416: GameAssetsInProgress_208
-    21300418: GameAssetsInProgress_209
-    21300420: GameAssetsInProgress_210
+    21300418: Current_Vert6
+    21300420: Current_Horiz6
     21300422: GameAssetsInProgress_211
     21300424: GameAssetsInProgress_212
     21300426: GameAssetsInProgress_213
@@ -241,8 +241,8 @@ TextureImporter:
     21300468: GameAssetsInProgress_234
     21300470: GameAssetsInProgress_235
     21300472: GameAssetsInProgress_236
-    21300474: GameAssetsInProgress_237
-    21300476: GameAssetsInProgress_238
+    21300474: Current_Vert7
+    21300476: Current_Horiz7
     21300478: GameAssetsInProgress_239
     21300480: GameAssetsInProgress_240
     21300482: GameAssetsInProgress_241
@@ -266,7 +266,7 @@ TextureImporter:
     21300518: GameAssetsInProgress_259
     21300520: GameAssetsInProgress_260
     21300522: GameAssetsInProgress_261
-    21300524: GameAssetsInProgress_262
+    21300524: Lab4
     21300526: GameAssetsInProgress_263
     21300528: GameAssetsInProgress_264
     21300530: GameAssetsInProgress_265
@@ -506,6 +506,7 @@ TextureImporter:
     21300998: GameAssetsInProgress_499
     21301000: Chair
     21301002: DownStairsWall
+    21301004: Driftwood
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -821,37 +822,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_27
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 336
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_28
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 336
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_29
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 336
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_30
+    - name: Current_Vert0
       rect:
         serializedVersion: 2
         x: 480
@@ -861,7 +832,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_31
+    - name: Current_Horiz0
       rect:
         serializedVersion: 2
         x: 496
@@ -1141,37 +1112,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_59
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 320
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_60
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 320
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_61
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 320
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_62
+    - name: Current_Vert1
       rect:
         serializedVersion: 2
         x: 480
@@ -1181,7 +1122,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_63
+    - name: Current_Horiz1
       rect:
         serializedVersion: 2
         x: 496
@@ -1461,37 +1402,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_91
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 304
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_92
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 304
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_93
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 304
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_94
+    - name: Current_Vert2
       rect:
         serializedVersion: 2
         x: 480
@@ -1501,31 +1412,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_95
+    - name: Current_Horiz2
       rect:
         serializedVersion: 2
         x: 496
         y: 304
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_96
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 288
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_97
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 288
         width: 16
         height: 16
       alignment: 0
@@ -1571,43 +1462,13 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_103
+    - name: PalmTree
       rect:
         serializedVersion: 2
-        x: 272
-        y: 288
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_104
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 288
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_105
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 288
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_106
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 288
-        width: 16
-        height: 16
+        x: 278
+        y: 240
+        width: 52
+        height: 64
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1625,7 +1486,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 368
-        y: 288
+        y: 287
         width: 16
         height: 16
       alignment: 0
@@ -1671,17 +1532,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: LeftFacingBench
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 272
-        width: 15
-        height: 32
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_116
+    - name: Current_Vert3
       rect:
         serializedVersion: 2
         x: 480
@@ -1691,7 +1542,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_117
+    - name: Current_Horiz3
       rect:
         serializedVersion: 2
         x: 496
@@ -1701,73 +1552,13 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_118
+    - name: Boat1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 272
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_119
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 272
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_120
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 272
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_121
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 272
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_122
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 272
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_123
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 272
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_124
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 272
-        width: 16
-        height: 16
+        x: 1
+        y: 242
+        width: 109
+        height: 62
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1861,63 +1652,13 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_135
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 272
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_136
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 272
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_137
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 272
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_138
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 272
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: LittleRockLand1
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 272
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: LittleRockLand2
       rect:
         serializedVersion: 2
-        x: 416
-        y: 272
-        width: 16
-        height: 16
+        x: 417
+        y: 273
+        width: 14
+        height: 14
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1931,7 +1672,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_148
+    - name: Current_Vert4
       rect:
         serializedVersion: 2
         x: 480
@@ -1941,81 +1682,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_149
+    - name: Current_Horiz4
       rect:
         serializedVersion: 2
         x: 496
         y: 272
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_150
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 256
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_151
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 256
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_152
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 256
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_153
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 256
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_154
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 256
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_155
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 256
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_156
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 256
         width: 16
         height: 16
       alignment: 0
@@ -2101,50 +1772,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_167
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 256
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_168
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 256
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_169
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 256
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_170
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 256
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: BigRockWater2
       rect:
         serializedVersion: 2
-        x: 336
+        x: 335
         y: 240
         width: 32
         height: 32
@@ -2211,7 +1842,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_179
+    - name: Current_Vert5
       rect:
         serializedVersion: 2
         x: 480
@@ -2221,71 +1852,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_180
+    - name: Current_Horiz5
       rect:
         serializedVersion: 2
         x: 496
         y: 256
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_181
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 240
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_182
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 240
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_183
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 240
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_184
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 240
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_185
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 240
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_186
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 240
         width: 16
         height: 16
       alignment: 0
@@ -2381,46 +1952,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_196
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 240
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_197
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 240
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_198
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 240
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_199
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 240
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: GrassLand
       rect:
         serializedVersion: 2
@@ -2471,7 +2002,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_209
+    - name: Current_Vert6
       rect:
         serializedVersion: 2
         x: 480
@@ -2481,7 +2012,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_210
+    - name: Current_Horiz6
       rect:
         serializedVersion: 2
         x: 496
@@ -2701,57 +2232,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_232
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 224
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_233
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 224
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_234
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 224
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_235
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 224
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_236
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 224
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_237
+    - name: Current_Vert7
       rect:
         serializedVersion: 2
         x: 480
@@ -2761,7 +2242,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_238
+    - name: Current_Horiz7
       rect:
         serializedVersion: 2
         x: 496
@@ -2981,63 +2462,13 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_260
+    - name: Lab4
       rect:
         serializedVersion: 2
-        x: 368
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_261
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_262
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_263
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_264
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_265
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 208
-        width: 16
-        height: 16
+        x: 364
+        y: 70
+        width: 116
+        height: 170
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3255,76 +2686,6 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 336
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_288
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_289
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_290
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_291
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_292
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_293
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_294
-      rect:
-        serializedVersion: 2
-        x: 448
         y: 192
         width: 16
         height: 16
@@ -3551,86 +2912,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_317
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 176
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_318
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 176
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_319
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 176
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_320
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 176
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_321
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 176
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_322
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 176
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_323
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 176
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_324
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 176
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: GameAssetsInProgress_325
       rect:
         serializedVersion: 2
@@ -3845,86 +3126,6 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 336
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_347
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_348
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_349
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_350
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_351
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_352
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_353
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_354
-      rect:
-        serializedVersion: 2
-        x: 464
         y: 160
         width: 16
         height: 16
@@ -4151,86 +3352,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_377
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_378
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_379
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_380
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_381
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_382
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_383
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_384
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: FreeTurtle1
       rect:
         serializedVersion: 2
@@ -4391,86 +3512,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_407
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 128
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_408
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 128
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_409
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 128
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_410
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 128
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_411
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 128
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_412
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 128
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_413
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 128
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_414
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 128
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Computer
       rect:
         serializedVersion: 2
@@ -4501,150 +3542,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_428
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_429
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_430
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_431
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_432
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_433
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_434
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Calendar
       rect:
         serializedVersion: 2
         x: 48
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_444
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_445
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_446
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_447
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_448
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_449
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_450
-      rect:
-        serializedVersion: 2
-        x: 464
         y: 96
         width: 16
         height: 16
@@ -4701,126 +3602,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_463
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_464
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_465
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_466
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_467
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_468
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_469
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_482
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_483
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_484
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_485
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GameAssetsInProgress_486
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Floormat
       rect:
         serializedVersion: 2
@@ -4848,6 +3629,16 @@ TextureImporter:
         y: 68
         width: 96
         height: 58
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Driftwood
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 21
+        width: 25
+        height: 21
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
