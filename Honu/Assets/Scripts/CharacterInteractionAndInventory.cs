@@ -25,7 +25,7 @@ public class CharacterInteractionAndInventory : MonoBehaviour
     public int directionFacing = 3;
     float checkDistance = 0.25f;
 
-	void Start ()
+    void Start()
     {
         hasToolbox = false;
         hasScubaGear = false;
@@ -36,11 +36,11 @@ public class CharacterInteractionAndInventory : MonoBehaviour
         hullFixed = false;
         propFixed = false;
         numDriftwood = 0;
-	}
-	
-	void Update ()
+    }
+
+    void Update()
     {
-	    if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("Checking");
 
@@ -54,7 +54,7 @@ public class CharacterInteractionAndInventory : MonoBehaviour
             Ray checkInFrontRay = new Ray(this.transform.position, rayDirection);
             RaycastHit2D[] hits = Physics2D.RaycastAll(this.transform.position, rayDirection, checkDistance);
             Debug.DrawRay(this.transform.position, rayDirection, Color.red);
-            
+
             for (int i = 0; i < hits.Length; i++)
             {
                 Debug.Log(hits[i].collider.name);
@@ -156,7 +156,7 @@ public class CharacterInteractionAndInventory : MonoBehaviour
 
                             hullFixed = true;
                         }
-                        
+
                         if (hasToolbox && hasPropeller && !propFixed)
                         {
                             // SPEECH BUBBLE
@@ -176,7 +176,8 @@ public class CharacterInteractionAndInventory : MonoBehaviour
                         // SPEECH BUBBLE
                         // Text: "Accoring to my radar, the turtle is in the rocky region of the sea. I should probably stick with a smaller ship today."
                     }
+                }
             }
         }
-	}
+    }
 }
