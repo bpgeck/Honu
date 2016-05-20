@@ -16,6 +16,6 @@ public class InsideHouse : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Application.LoadLevel(1);
+        Application.LoadLevel(0);
     }
 }

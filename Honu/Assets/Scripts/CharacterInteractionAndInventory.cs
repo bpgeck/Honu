@@ -19,14 +19,14 @@ public class CharacterInteractionAndInventory : MonoBehaviour
     public bool hasBirthday;
     public bool hasHint;
     public int numDriftwood;
-	private bool pressedE;
-	private float timetoHideSpeech = 3.5f; //seconds
+	private bool interacted;
+	private float timetoHideSpeech = 5f; //seconds
 
     bool hullFixed;
     bool propFixed;
 
     public int directionFacing = 3;
-    float checkDistance = 0.25f;
+    float checkDistance = 0.2f;
 
 	private GameObject speechBubble;
 	private Text speechText;
@@ -40,6 +40,8 @@ public class CharacterInteractionAndInventory : MonoBehaviour
 	private Vector2 textrtSD;
 	private Vector2 textrtT;
 
+    IEnumerator coroutine;
+
     void Start()
     {
         hasToolbox = false;
@@ -52,7 +54,7 @@ public class CharacterInteractionAndInventory : MonoBehaviour
         propFixed = false;
         numDriftwood = 0;
 
-		pressedE = false;
+		interacted = false;
 
 		speechBubble = GameObject.Find ("Speech");
 		speechText = GameObject.Find ("Text").GetComponent<Text>();
@@ -68,20 +70,29 @@ public class CharacterInteractionAndInventory : MonoBehaviour
 		textrtSD = new Vector2 (textrt.sizeDelta.x, textrt.sizeDelta.y);
 		textrtT = new Vector3 (textrt.localPosition.x, textrt.localPosition.y, textrt.localPosition.z);
 
+        if (this.gameObject.name.Contains("Scientist"))
+        {
+            speechBubble.SetActive(true);
 
+            comprt.sizeDelta = new Vector2(290, 265);
+            comprt.localScale = new Vector3(2, 2, comprt.localScale.z);
+            comprt.localPosition = new Vector3(252.0f, 210.0f, -5.0f);
+
+            textrt.sizeDelta = new Vector2(465, 350);
+            textrt.localPosition = new Vector3(0.0f, -20.0f, textrt.localPosition.z);
+
+            speechText.text = "Sheesh. This is the third day in a row one of these sea turtles hasn't moved. I think I should take the boat out and go check out if he's okay. \n \n (Use WASD to move, E to interact with items, and I to display Inventory)";
+
+            if (coroutine != null) StopCoroutine(coroutine);
+            coroutine = showThenHide(10.0f);
+            StartCoroutine(coroutine);
+        }
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-
-			if (pressedE == true) {
-				return;
-			}
-
-			pressedE = true;
-			StartCoroutine (resetE(2.0f));
             Debug.Log("Checking");
 
             Vector3 rayDirection = new Vector3(0, 0, 0);
@@ -94,31 +105,44 @@ public class CharacterInteractionAndInventory : MonoBehaviour
             Ray checkInFrontRay = new Ray(this.transform.position, rayDirection);
             RaycastHit2D[] hits = Physics2D.RaycastAll(this.transform.position, rayDirection, checkDistance);
             Debug.DrawRay(this.transform.position, rayDirection, Color.red);
-
-			comprt.sizeDelta = comprtSD;
-			comprt.localScale = comprtLS;
-			comprt.localPosition = comprtT;
-			
-			textrt.sizeDelta = textrtSD;
-			textrt.localPosition = textrtT;
 			
 			for (int i = 0; i < hits.Length; i++)
             {
-               
+                Debug.Log(hits[i].collider.name);
 
                 if (hits[i].collider.tag == "Interactable")
                 {
-					// Debug.Log(hits[i].collider.name);
+
+                    if (interacted == true)
+                    {
+                        return;
+                    }
+
+                    comprt.sizeDelta = comprtSD;
+                    comprt.localScale = comprtLS;
+                    comprt.localPosition = comprtT;
+
+                    textrt.sizeDelta = textrtSD;
+                    textrt.localPosition = textrtT;
+
+                    interacted = true;
+                    
+                    StartCoroutine(resetE(0.5f));
+
+                    // Debug.Log(hits[i].collider.name);
                     if (hits[i].collider.name.Contains("Toolbox"))
                     {
                         Debug.Log("Grabbing Toolbox");
 					
 						speechBubble.SetActive(true);
 						speechText.text = "Hmm, maybe this toolbox will come in handy.";
-						StartCoroutine (showthenHide(timetoHideSpeech));
+
+                        if (coroutine != null) StopCoroutine(coroutine);
+                        coroutine = showThenHide(timetoHideSpeech);
+                        StartCoroutine (coroutine);
 
                         hasToolbox = true;
-                        hits[i].collider.gameObject.SetActive(false);
+                        hits[i].collider.gameObject.GetComponent<SpriteRenderer>().enabled = false;
                     }
                     else if (hits[i].collider.name.Contains("Trash"))
                     {
@@ -126,10 +150,19 @@ public class CharacterInteractionAndInventory : MonoBehaviour
 
                         if (hasToolbox)
                         {
+                            comprt.sizeDelta = new Vector2(135, 135);
+                            comprt.localPosition = new Vector3(175.0f, 100.0f, -5.0f);
 
-							speechBubble.SetActive(true);
-							speechText.text = "One man's trash is another man's propeller.";
-							StartCoroutine (showthenHide(3.0f));
+                            textrt.sizeDelta = new Vector2(230, 125);
+                            textrt.localPosition = new Vector3(1.7f, textrt.localPosition.y, textrt.localPosition.z);
+
+                            speechBubble.SetActive(true);
+                                
+                            speechText.text = "I'll use these tools to take apart this broken fan fan aaaaaand...a propeller!";
+
+                            if (coroutine != null) StopCoroutine(coroutine);
+                            coroutine = showThenHide(3.0f);
+                            StartCoroutine (coroutine);
                             // Text: "One man's trash is another man's propeller"
 
                             hasPropeller = true;
@@ -144,16 +177,22 @@ public class CharacterInteractionAndInventory : MonoBehaviour
 							textrt.localPosition = new Vector3(1.7f, textrt.localPosition.y, textrt.localPosition.z);
 
 							speechBubble.SetActive(true);
-							speechText.text = "Hey, there's a broken fan in here. Nothing looks broken. I guess the motor must have gone out.";
-							StartCoroutine (showthenHide(5.0f));
-							// Text: "Hey there's a broken fan in here. Nothing looks broken. I guess the motor must have gone out."
+							speechText.text = "Hey, there's a broken fan in here. No parts look damaged. I guess the motor must have gone out.";
+
+                            if (coroutine != null) StopCoroutine(coroutine);
+                            coroutine = showThenHide(5.0f);
+                            StartCoroutine(coroutine);
+                            // Text: "Hey there's a broken fan in here. Nothing looks broken. I guess the motor must have gone out."
                         }
                     }
-                    else if (hits[i].collider.name.Contains("Driftwood"))
+                    else if (hits[i].collider.name.Contains("Driftwood") && numDriftwood < 5)
                     {
 						speechBubble.SetActive(true);
 						speechText.text = "Driftwood. That might come in handy.";
-						StartCoroutine (showthenHide(3.0f));
+
+                        if (coroutine != null) StopCoroutine(coroutine);
+                        coroutine = showThenHide(3.0f);
+                        StartCoroutine(coroutine);
                         // Text: "Driftwood. That might come in handy."
 
                         Debug.Log("Grabbing Driftwood");
@@ -165,7 +204,10 @@ public class CharacterInteractionAndInventory : MonoBehaviour
                         {
 							speechBubble.SetActive(true);
 							speechText.text = "Alright, that's all the driftwood I can carry.";
-							StartCoroutine (showthenHide(3.0f));
+
+                            if (coroutine != null) StopCoroutine(coroutine);
+                            coroutine = showThenHide(3.0f);
+                            StartCoroutine(coroutine);
                             // Text: "Alright that's all the driftwood I can carry."
                         }
                     }
@@ -177,7 +219,10 @@ public class CharacterInteractionAndInventory : MonoBehaviour
                         {
 							speechBubble.SetActive(true);
 							speechText.text = "Alright, let's try this out...Aha! Scuba gear!";
-							StartCoroutine (showthenHide(timetoHideSpeech));
+
+                            if (coroutine != null) StopCoroutine(coroutine);
+                            coroutine = showThenHide(timetoHideSpeech);
+                            StartCoroutine(coroutine);
                             // Text: "Alright let's try this out... Aha! Scuba gear!"
 
                             hasScubaGear = true;
@@ -195,7 +240,10 @@ public class CharacterInteractionAndInventory : MonoBehaviour
 
 							speechBubble.SetActive(true);
 							speechText.text = "The storage closet is locked. The last guy here must have set a new code.";
-							StartCoroutine (showthenHide(timetoHideSpeech));
+
+                            if (coroutine != null) StopCoroutine(coroutine);
+                            coroutine = showThenHide(timetoHideSpeech);
+                            StartCoroutine(coroutine);
                             // Text: "The storage closet is locked. The last guy here must have set a new code."
                         }
                     }
@@ -210,7 +258,10 @@ public class CharacterInteractionAndInventory : MonoBehaviour
 			
 						speechBubble.SetActive(true);
 						speechText.text = "\"Jamie's Birthday: 03-18-08.\" Huh. Happy belated birthday Jamie.";
-						StartCoroutine (showthenHide(timetoHideSpeech));
+
+                        if (coroutine != null) StopCoroutine(coroutine);
+                        coroutine = showThenHide(timetoHideSpeech);
+                        StartCoroutine(coroutine);
                         // Text: ""Jamie's Birthday: 03-18-08." Huh. Happy belated birthday Jamie."
 
                         hasBirthday = true;
@@ -229,11 +280,14 @@ public class CharacterInteractionAndInventory : MonoBehaviour
 						//speechBubble.GetComponent<RectTransform>()
 						speechBubble.SetActive(true);
 						speechText.text = "This looks like the work log for the last scientist:NEWLINE" +
-							"Day 1: Catalogued plenty of sea turtles today. Good to see they're still migrating on time.NEWLINE" +
+							"\"Day 1: Catalogued plenty of sea turtles today. Good to see they're still migrating on time.NEWLINE" +
 							"Day 2: I've noticed some of the turtles are getting attracted to the lights of my boat. I'll stop going out at night now.NEWLINE" +
-							"Day 3: Accidentally broke the lock on the closet downstairs. Make sure to tell the next scientist the passcode is my daughter's birthday.";
+							"Day 3: Accidentally broke the lock on the closet downstairs. Make sure to tell the next scientist the passcode is my daughter's birthday.\"";
 						speechText.text = speechText.text.Replace("NEWLINE", "\n");
-						StartCoroutine (showthenHide(15.0f));
+
+                        if (coroutine != null) StopCoroutine(coroutine);
+                        coroutine = showThenHide(15.0f);
+                        StartCoroutine(coroutine);
                         // Text: "This looks like the work log for the last scientist:
                         //       "Day 1: Cataloged plenty of sea turtles today. Good to see they're still migrating on time.
                         //       "Day 2: I've noticed some of the turtles are getting attracted to the lights of my boat. I'll stop going out at night now.
@@ -242,14 +296,19 @@ public class CharacterInteractionAndInventory : MonoBehaviour
                         hasHint = true;
                       //  hits[i].collider.gameObject.tag = "Untagged";
                     }
-                    else if (hits[i].collider.name.Contains("Boat"))
+                    else if (hits[i].collider.name.Contains("MiniBoat"))
                     {
                         if (hasToolbox && numDriftwood == 5 && !hullFixed)
                         {
 							speechBubble.SetActive(true);
 							speechText.text = "Alright, driftwood plus tools equals a fixed hole. Awesome!";
-							StartCoroutine (showthenHide(timetoHideSpeech));
+
+                            if (coroutine != null) StopCoroutine(coroutine);
+                            coroutine = showThenHide(timetoHideSpeech);
+                            StartCoroutine(coroutine);
                             // Text: Alright driftwood plus tools equals a fixed hole. Awesome!
+
+                            numDriftwood = 0;
 
                             hullFixed = true;
                         }
@@ -258,8 +317,13 @@ public class CharacterInteractionAndInventory : MonoBehaviour
                         {
 							speechBubble.SetActive(true);
 							speechText.text = "Fan propeller. Boat propeller. Same thing. Fixed!";
-							StartCoroutine (showthenHide(timetoHideSpeech));
+
+                            if (coroutine != null) StopCoroutine(coroutine);
+                            coroutine = showThenHide(timetoHideSpeech);
+                            StartCoroutine(coroutine);
                             // Text: Fan propeller. Boat propeller. Same thing. Fixed!
+
+                            hasPropeller = false;
 
                             propFixed = true;
                         }
@@ -267,37 +331,114 @@ public class CharacterInteractionAndInventory : MonoBehaviour
                         if (hullFixed && propFixed && hasScubaGear)
                         {
 							speechBubble.SetActive(true);
-							speechText.text = "Sweet, it looks like that's everything. Let's get out on the sea and find that little guy.";
-							StartCoroutine (showthenHide(timetoHideSpeech));
-							// Text: Sweet it looks like that's everything. Let's get out on the sea and find that little guy."
+							speechText.text = "Sweet, let's get out on the sea and find that little guy.";
+
+                            if (coroutine != null) StopCoroutine(coroutine);
+                            coroutine = showThenHide(timetoHideSpeech);
+                            StartCoroutine(coroutine);
+                            // Text: Sweet it looks like that's everything. Let's get out on the sea and find that little guy."
+
+                            Application.LoadLevel(2);
+                        }
+
+                        if (!hullFixed || !propFixed || !hasScubaGear)
+                        {
+                            comprt.sizeDelta = new Vector2(175, 135);
+                            comprt.localPosition = new Vector3(210.0f, 100.0f, -5.0f);
+
+                            textrt.sizeDelta = new Vector2(275, 125);
+                            textrt.localPosition = new Vector3(1.7f, textrt.localPosition.y, textrt.localPosition.z);
+
+                            speechBubble.SetActive(true);
+                            speechText.text = "Shoot. It's broken. It looks like I need wood to fix the hull, a new propeller and scuba gear for when I'm out in the ocean.";
+
+                            if (coroutine != null) StopCoroutine(coroutine);
+                            coroutine = showThenHide(timetoHideSpeech);
+                            StartCoroutine(coroutine);
                         }
                     }
                     else if (hits[i].collider.name.Contains("Ship"))
                     {
 						speechBubble.SetActive(true);
-						speechText.text = "According to my radar, the turtle is in the rocky region of the sea. I should probably stick with a smaller ship today.";
-						StartCoroutine (showthenHide(5.0f));
-						// Text: "Accoring to my radar, the turtle is in the rocky region of the sea. I should probably stick with a smaller ship today."
+
+                        comprt.sizeDelta = new Vector2(175, 135);
+                        comprt.localPosition = new Vector3(210.0f, 100.0f, -5.0f);
+
+                        textrt.sizeDelta = new Vector2(275, 125);
+                        textrt.localPosition = new Vector3(1.7f, textrt.localPosition.y, textrt.localPosition.z);
+
+                        speechText.text = "According to my radar, the turtle is in the rocky region of the sea. I should probably stick with a smaller boat today.";
+
+                        if (coroutine != null) StopCoroutine(coroutine);
+                        coroutine = showThenHide(timetoHideSpeech);
+                        StartCoroutine(coroutine);
+                        // Text: "Accoring to my radar, the turtle is in the rocky region of the sea. I should probably stick with a smaller ship today."
+                    }
+                    else if (hits[i].collider.name.Contains("Turtle"))
+                    {
+                        speechBubble.SetActive(true);
+
+                        GameObject.Find("Trapped Turtle").GetComponent<SpriteRenderer>().enabled = false;
+                        GameObject.Find("Trapped Turtle").GetComponent<BoxCollider2D>().enabled = false;
+                        GameObject.Find("Free Turtle").GetComponent<SpriteRenderer>().enabled = true;
+                        GameObject.Find("Free Turtle").GetComponent<Animator>().SetBool("Transition", true);
+                        
+                        comprt.sizeDelta = new Vector2(175, 135);
+                        comprt.localPosition = new Vector3(210.0f, 100.0f, -5.0f);
+
+                        textrt.sizeDelta = new Vector2(275, 125);
+                        textrt.localPosition = new Vector3(1.7f, textrt.localPosition.y, textrt.localPosition.z);
+                        speechText.text = "Be free little guy! Alright now I really need to report what I found here!";
+
+                        GameObject.Find("FollowCamera").GetComponent<Animator>().enabled = true;
+                        GameObject.Find("FollowCamera").GetComponent<Animator>().SetBool("GameOver", true);
                     }
                 }
-				else {
-					if (hits[i].collider.name.Contains("Desk")) return;
-					if (hits[i].collider.name.Contains ("OpenLockedCloset")) return;
-					if (hits[i].collider.name.Contains("Top")) return;
-					if (hits[i].collider.name.Contains("Left")) return;
-					if (hits[i].collider.name.Contains("Bottom")) return;
-					if (hits[i].collider.name.Contains("Right")) return;
-					speechBubble.SetActive(false);
-				}
             }
         }
+
+        else if (Input.GetKey(KeyCode.I))
+        {
+            string displayString = "Alright I have:";
+            if (hasScubaGear)
+            {
+                displayString = displayString + "\n" + "Scuba Gear";
+            }
+            if (hasToolbox)
+            {
+                displayString = displayString + "\n" + "A Toolbox";
+            }
+            if (hasPropeller)
+            {
+                displayString = displayString + "\n" + "A Propeller";
+            }
+            if (numDriftwood > 0)
+            {
+                displayString = displayString + "\n" + numDriftwood + " pieces of Driftwood";
+            }
+
+            if (!hasPropeller && !hasScubaGear && !hasToolbox && numDriftwood == 0)
+            {
+                displayString = displayString + "\n" + "Absolutely nothing";
+            }
+
+            speechBubble.SetActive(true);
+
+            comprt.sizeDelta = new Vector2(175, 125);
+            comprt.localPosition = new Vector3(210.0f, 100.0f, -5.0f);
+
+            textrt.sizeDelta = new Vector2(275, 125);
+            textrt.localPosition = new Vector3(1.7f, textrt.localPosition.y, textrt.localPosition.z);
+
+            speechText.text = displayString;
+        }
     }
-	IEnumerator showthenHide(float waitTime){
+	IEnumerator showThenHide(float waitTime){
 		yield return new WaitForSeconds (waitTime);
 		speechBubble.SetActive (false);
 	}
 	IEnumerator resetE(float waitTime){
 		yield return new WaitForSeconds(waitTime);
-		pressedE = false;
+		interacted = false;
 	}
 }

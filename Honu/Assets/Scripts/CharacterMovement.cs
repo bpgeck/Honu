@@ -19,7 +19,7 @@ public class CharacterMovement : MonoBehaviour
 	void Start ()
     {
         startRotation = this.transform.rotation;
-	}
+    }
 	
 	void Update ()
     {
