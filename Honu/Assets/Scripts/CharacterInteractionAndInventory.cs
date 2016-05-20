@@ -108,7 +108,7 @@ public class CharacterInteractionAndInventory : MonoBehaviour
 
                 if (hits[i].collider.tag == "Interactable")
                 {
-					Debug.Log(hits[i].collider.name);
+					// Debug.Log(hits[i].collider.name);
                     if (hits[i].collider.name.Contains("Toolbox"))
                     {
                         Debug.Log("Grabbing Toolbox");
@@ -145,7 +145,7 @@ public class CharacterInteractionAndInventory : MonoBehaviour
 
 							speechBubble.SetActive(true);
 							speechText.text = "Hey, there's a broken fan in here. Nothing looks broken. I guess the motor must have gone out.";
-							//StartCoroutine (showthenHide(5.0f));
+							StartCoroutine (showthenHide(5.0f));
 							// Text: "Hey there's a broken fan in here. Nothing looks broken. I guess the motor must have gone out."
                         }
                     }
@@ -171,13 +171,13 @@ public class CharacterInteractionAndInventory : MonoBehaviour
                     }
                     else if (hits[i].collider.name.Contains("Closet"))
                     {
-                        Debug.Log("Opening Closet");
+                        Debug.Log("Checking Locked Closet");
 
                         if (hasHint && hasBirthday)
                         {
 							speechBubble.SetActive(true);
 							speechText.text = "Alright, let's try this out...Aha! Scuba gear!";
-							//StartCoroutine (showthenHide(timetoHideSpeech));
+							StartCoroutine (showthenHide(timetoHideSpeech));
                             // Text: "Alright let's try this out... Aha! Scuba gear!"
 
                             hasScubaGear = true;
@@ -195,7 +195,7 @@ public class CharacterInteractionAndInventory : MonoBehaviour
 
 							speechBubble.SetActive(true);
 							speechText.text = "The storage closet is locked. The last guy here must have set a new code.";
-							//StartCoroutine (showthenHide(timetoHideSpeech));
+							StartCoroutine (showthenHide(timetoHideSpeech));
                             // Text: "The storage closet is locked. The last guy here must have set a new code."
                         }
                     }
@@ -210,7 +210,7 @@ public class CharacterInteractionAndInventory : MonoBehaviour
 			
 						speechBubble.SetActive(true);
 						speechText.text = "\"Jamie's Birthday: 03-18-08.\" Huh. Happy belated birthday Jamie.";
-						//StartCoroutine (showthenHide(timetoHideSpeech));
+						StartCoroutine (showthenHide(timetoHideSpeech));
                         // Text: ""Jamie's Birthday: 03-18-08." Huh. Happy belated birthday Jamie."
 
                         hasBirthday = true;
