@@ -338,7 +338,7 @@ public class CharacterInteractionAndInventory : MonoBehaviour
                             StartCoroutine(coroutine);
                             // Text: Sweet it looks like that's everything. Let's get out on the sea and find that little guy."
 
-                            Application.LoadLevel(2);
+                            Application.LoadLevel(3);
                         }
 
                         if (!hullFixed || !propFixed || !hasScubaGear)

@@ -15,6 +15,6 @@ public class GoIntoBoat : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Application.LoadLevel(4);
+        Application.LoadLevel(5);
     }
 }

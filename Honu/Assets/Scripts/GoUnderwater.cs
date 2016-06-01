@@ -15,6 +15,6 @@ public class GoUnderwater : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Application.LoadLevel(3);
+        Application.LoadLevel(4);
     }
 }

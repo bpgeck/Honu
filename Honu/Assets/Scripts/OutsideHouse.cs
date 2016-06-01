@@ -15,6 +15,6 @@ public class OutsideHouse : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Application.LoadLevel(1);
+        Application.LoadLevel(2);
     }
 }
