@@ -4,5 +4,7 @@ Your sea turtle research was going swell--until this morning when you realized o
 
 Honu is a top-down, 2-D adventure game made in two weeks time for AdventureJam 2016 by Brendan Geck (bpgeck), Vanessa Gutierrez, and Brazen Abelgas (xyzgon).
 
+Play at: https://gamejolt.com/games/honu/149755
+
 ![Banner](http://i.imgur.com/TlLWUrS.jpg)
 ![In-Game Image](http://i.imgur.com/XnZeDAM.png)
